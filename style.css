@@ -123,3 +123,152 @@ body {
 }
 
 .btn-primary:hover { background: #ff6b6b; color: #fff; }
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+
+    .reservation-card {
+        padding: 35px;
+        border-radius: 30px;
+    }
+
+    .display-3 {
+        font-size: 3rem;
+    }
+
+    .feature-box {
+        padding: 25px;
+    }
+
+    .ambience-img {
+        height: 280px;
+    }
+}
+
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding-left: 0;
+    }
+
+    .nav-links li {
+        list-style: none;
+    }
+
+    .btn-dine {
+        padding: 0.45rem 1.2rem;
+    }
+
+    /* Hero Heading */
+    .display-3 {
+        font-size: 2.3rem;
+    }
+
+    /* Reservation Card */
+    .reservation-card {
+        padding: 25px;
+        border-radius: 25px;
+    }
+
+    /* Form Inputs */
+    .form-control,
+    .form-select {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    /* Button */
+    .btn-reserve {
+        padding: 14px 25px;
+        font-size: 0.95rem;
+    }
+
+    /* Features */
+    .feature-box {
+        flex-direction: column;
+        text-align: center;
+        align-items: center !important;
+    }
+
+    .feature-icon {
+        margin-right: 0 !important;
+        margin-bottom: 15px;
+    }
+
+    /* Images */
+    .ambience-img {
+        height: 230px;
+        border-radius: 20px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 2rem 1rem !important;
+    }
+}
+
+
+/* Small Phones */
+@media (max-width: 480px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .display-3 {
+        font-size: 1.9rem;
+    }
+
+    .reservation-card {
+        padding: 20px;
+    }
+
+    .navbar .logo {
+        font-size: 1.3rem;
+    }
+
+    .nav-links {
+        gap: 0.6rem;
+    }
+
+    .nav-links li a {
+        font-size: 0.9rem;
+    }
+
+    .btn-dine {
+        font-size: 0.85rem;
+    }
+
+    .feature-box {
+        padding: 20px;
+    }
+
+    .feature-icon {
+        font-size: 2rem;
+    }
+
+    .ambience-img {
+        height: 200px;
+    }
+
+    .btn-reserve {
+        font-size: 0.9rem;
+    }
+}
