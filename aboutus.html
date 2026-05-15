@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Gourmet Menu | About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        body {
+            background-color: #1a1a1a; 
+            background: radial-gradient(circle at top, #2c2c2c 0%, #121212 100%);
+            color: #f8f9fa;
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Reusing your Menu Accent Colors */
+        .accent-red { color: #ff4d4d; }
+        
+        /* About Section Styles */
+        .about-section { padding: 100px 0; }
+        
+        .about-image-container {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .accent-label {
+            color: #ff4d4d;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        /* Glassmorphism Stats */
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 77, 77, 0.1);
+            border-color: #ff4d4d;
+        }
+
+        .quote-box {
+            border-left: 4px solid #ff4d4d;
+            padding: 10px 25px;
+            margin: 35px 0;
+            font-style: italic;
+            color: #d1d1d1;
+            font-size: 1.1rem;
+            background: rgba(255,255,255,0.02);
+        }
+
+        /* Footer & Social Icons */
+        .social-footer {
+            padding: 80px 0 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .social-link {
+            font-size: 1.4rem;
+            color: #f8f9fa;
+            width: 55px;
+            height: 55px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            color: #ffffff;
+            background: #ff4d4d;
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 0 0 25px rgba(255, 77, 77, 0.5);
+            border-color: #ff4d4d;
+        }
+
+        .follow-text {
+            letter-spacing: 4px;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+            /* Navbar */
+             .navbar {
+            background: rgba(26, 26, 26, 0.8);
+            backdrop-filter: blur(5px);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ff4d4d;
+        }
+        .navbar .logo span { color: #ffffff; }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+        .nav-links li a {
+            color: #f8f9fa;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .nav-links li a:hover { color: #ff4d4d; }
+        .btn-dine {
+            background-color: #ff4d4d;
+            color: #ffffff;
+            border-radius: 30px;
+            padding: 0.5rem 1.5rem;
+            font-weight: 600;
+        }
+        .sticky-top {
+            position: sticky;
+            top: 0;
+        }
+
+    </style>
+</head>
+<body>
+     <nav class="navbar" id="navbar">
+        <div class="logo">CAFE<span>FLAVOR</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="intro2.html">Menu</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="dine.html" class="btn-dine">Dine In</a></li>
+        </ul>
+    </nav>
+
+    <div class="container about-section">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="about-image-container">
+                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1000&q=80" 
+                         alt="Our Chef" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <span class="accent-label">The Gourmet Legacy</span>
+                <h2 class="display-5 fw-bold mb-4">Crafting Flavors,<br><span class="accent-red">Creating Memories</span></h2>
+                <p class="text-light fs-5">
+                    Founded in 2018, our kitchen began with a simple belief: that fine-dining quality should be accessible to everyone. We don't just serve food; we curate experiences.
+                </p>
+                
+                <div class="quote-box">
+                    "Every ingredient has a story. Our job is to make sure it has a delicious ending."
+                </div>
+
+                <p class="text-light mb-5">
+                    From our 48-hour fermented pizza dough to our hand-pressed organic burgers, we prioritize slow-cooking techniques and locally sourced ingredients. 
+                </p>
+
+                <div class="row g-3 text-center">
+                    <div class="col-4">
+                        <div class="stat-card">
+                            <h3 class="fw-bold mb-0">15+</h3>
+                            <small class="text-muted uppercase">Chefs</small>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="stat-card">
+                            <h3 class="fw-bold mb-0">50k</h3>
+                            <small class="text-muted uppercase">Orders</small>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="stat-card">
+                            <h3 class="fw-bold mb-0">100%</h3>
+                            <small class="text-muted uppercase">Fresh</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="social-footer text-center">
+        <div class="container">
+            <p class="follow-text mb-4">Follow Our Journey</p>
+            <div class="d-flex justify-content-center gap-4 mb-5">
+                <a href="#" class="social-link" title="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" class="social-link" title="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" class="social-link" title="Pinterest">
+                    <i class="bi bi-pinterest"></i>
+                </a>
+            </div>
+            <div class="text-muted small">
+                <p class="mb-1">&copy; 2026 Gourmet Menu. Crafted for food lovers.</p>
+                <p>Nala Sopara, Maharashtra, India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

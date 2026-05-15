@@ -1,0 +1,183 @@
+/* General Layout */
+body {
+    background-color: #0a0a0a;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    max-width: 1200px; /* Limits the width so it doesn't stretch forever */
+    margin: 0 auto;    /* Centers the content */
+    padding: 0 20px;
+}
+
+.menu-section {
+   height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+  padding: 80px 0;
+}
+
+.section-title {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+
+.section-title span {
+    color: #ff6b6b;
+    font-style: italic;
+}
+
+/* Grid System - The Fix for the "Stretching" */
+.menu-grid {
+    display: grid;
+    /* This tells the browser: "Make exactly 3 columns of equal size" */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Tablet / Small Laptop Fix */
+@media (max-width: 1024px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    }
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr; /* 1 item per row */
+    }
+}
+
+/* Card Design */
+.menu-item {
+    background: #141414;
+    border: 1px solid #222;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Stack image on top of text */
+    transition: 0.3s ease;
+}
+
+.menu-item:hover {
+    border-color: #ff6b6b;
+    transform: translateY(-5px);
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 220px; /* Fixed height for consistency */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the area without distorting */
+}
+
+/* Info Section */
+.item-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-info h3 {
+    color: #fff;
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+}
+
+.price {
+    color: #ff6b6b;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.item-info p {
+    color: #999;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Buttons Layout */
+.item-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: auto; /* Pushes buttons to the bottom */
+}
+
+.btn-select {
+    flex: 2;
+    background: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-view {
+    flex: 1;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #333;
+    padding: 12px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.btn-select:hover { background: #ff5252; }
+.btn-view:hover { border-color: #fff; }
+
+/* Filter Buttons Styling */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.filter-btn.active {
+    background: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+.item-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff6b6b;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
